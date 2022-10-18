@@ -1,5 +1,4 @@
 Create an HTML page that includes a:
-
 - Title
 - Heading 1
 - Paragraph
