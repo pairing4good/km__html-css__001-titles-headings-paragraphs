@@ -1,6 +1,6 @@
 const http = require('http');
 const fs = require('fs');
-const puppeteer = require('puppeteer-core');
+const puppeteer = require('puppeteer');
 
 let server;
 let browser;
@@ -8,7 +8,7 @@ let page;
 
 beforeAll(async () => {
   server = http.createServer(function (req, res) {
-    fs.readFile(__dirname + '\\..\\' + req.url, function (err,data) {
+    fs.readFile(__dirname + '/..' + req.url, function (err,data) {
       if (err) {
         res.writeHead(404);
         res.end(JSON.stringify(err));
