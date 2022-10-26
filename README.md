@@ -1,7 +1,7 @@
-Create an HTML page that includes a:
-- Title
-- Heading 1
-- Paragraph
+The `index.html` file
+- should diplay a document title
+- should display an importance level one heading
+- should display paragraph text
 
 Resources:
 - https://www.w3schools.com/tags/tag_title.asp
