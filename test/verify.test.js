@@ -38,30 +38,21 @@ afterEach(async () => {
 
 describe('title', () => {
   it('should exist', async () => {
-    const title = await page.evaluate(() => {
-      return document.getElementsByTagName('title')[0];
-    });
-    
-    expect(title).toBeDefined();
+    const title = await page.$('head title');
+    expect(title).not.toBeNull();
   });
 });
 
 describe('heading 1', () => {
   it('should exist', async () => {
-    const heading = await page.evaluate(() => {
-      return document.getElementsByTagName('h1')[0];
-    });
-    
-    expect(heading).toBeDefined();
+    const heading = await page.$('h1');
+    expect(heading).not.toBeNull();
   });
 });
 
 describe('paragraph', () => {
   it('should exist', async () => {
-    const paragraph = await page.evaluate(() => {
-      return document.getElementsByTagName('p')[0];
-    });
-    
-    expect(paragraph).toBeDefined();
+    const paragraph = await page.$('p');
+    expect(paragraph).not.toBeNull();
   });
 });
